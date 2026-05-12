@@ -1,0 +1,467 @@
+ <!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mayrig Yerevan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+width:100%;
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+-webkit-backdrop-filter:blur(10px);
+backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.2);
+position:fixed;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#f7c873;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:17px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#f7c873;
+}
+
+/* HERO */
+
+.hero{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:80px;
+margin-bottom:20px;
+color:#f7c873;
+text-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.hero-content p{
+font-size:22px;
+max-width:700px;
+line-height:1.7;
+margin:auto;
+margin-bottom:35px;
+}
+
+.hero-content button{
+padding:16px 40px;
+border:none;
+border-radius:50px;
+background:#f7c873;
+color:#111;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:0.4s;
+}
+
+.hero-content button:hover{
+transform:scale(1.07);
+background:white;
+}
+
+/* ABOUT */
+
+.about{
+padding:120px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:60px;
+align-items:center;
+background:#181818;
+}
+
+.about img{
+width:100%;
+border-radius:25px;
+box-shadow:0 0 30px rgba(0,0,0,0.4);
+}
+
+.about-text h2{
+font-size:50px;
+margin-bottom:25px;
+color:#f7c873;
+}
+
+.about-text p{
+font-size:18px;
+line-height:1.9;
+color:#ddd;
+}
+
+/* MENU */
+
+.menu{
+padding:120px 8%;
+background:#111;
+text-align:center;
+}
+
+.section-title{
+font-size:55px;
+margin-bottom:70px;
+color:#f7c873;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.menu-card{
+background:#1e1e1e;
+border-radius:25px;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.menu-card:hover{
+transform:translateY(-12px);
+}
+
+.menu-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.menu-content{
+padding:25px;
+}
+
+.menu-content h3{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.menu-content p{
+color:#ccc;
+line-height:1.7;
+margin-bottom:15px;
+}
+
+.price{
+font-size:24px;
+font-weight:700;
+color:#f7c873;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:120px 8%;
+background:#181818;
+text-align:center;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.gallery-grid img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+transition:0.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+padding:120px 8%;
+background:#111;
+text-align:center;
+}
+
+.contact h2{
+font-size:55px;
+margin-bottom:30px;
+color:#f7c873;
+}
+
+.contact p{
+font-size:20px;
+color:#ddd;
+margin-bottom:15px;
+}
+
+.contact button{
+margin-top:35px;
+padding:16px 40px;
+border:none;
+border-radius:50px;
+background:#f7c873;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact button:hover{
+background:white;
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+color:#aaa;
+font-size:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:52px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+.section-title,
+.contact h2,
+.about-text h2{
+font-size:40px;
+}
+
+nav{
+padding:20px 5%;
+}
+
+nav ul{
+gap:18px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+.logo{
+font-size:24px;
+}
+ nav ul li a{
+font-size:14px;
+}
+
+.hero-content button{
+padding:14px 30px;
+font-size:16px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav>
+<div class="logo">Mayrig</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<div class="hero-content">
+<h1>Mayrig Yerevan</h1>
+
+<p>
+Luxury Armenian & Lebanese cuisine experience
+in the heart of Yerevan.
+Traditional flavors, elegant atmosphere,
+and unforgettable moments.
+</p>
+
+<button>Reserve Table</button>
+
+</div>
+</div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<div class="about-text">
+
+<h2>About Us</h2>
+
+<p>
+Mayrig Yerevan is one of the most elegant restaurants in Armenia,
+offering premium Armenian and Middle Eastern cuisine.
+Our chefs create unique dishes using fresh ingredients,
+traditional recipes, and modern presentation.
+Enjoy a warm atmosphere, luxury interior,
+and exceptional service.
+</p>
+
+</div>
+
+</section>
+
+<!-- MENU -->
+
+<section class="menu" id="menu">
+
+<h2 class="section-title">Popular Dishes</h2>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="">
+<div class="menu-content">
+<h3>Grilled Meat</h3>
+<p>Traditional Armenian grilled meat with fresh herbs and spices.</p>
+<div class="price">$24</div>
+</div>
+</div>
+
+<div class="menu-card">
+<img src="Oil-Free-Lebanese-Salata_01.jpg" alt="">
+<div class="menu-content">
+<h3>Lebanese Salad</h3>
+<p>Fresh vegetables, olive oil, lemon and authentic eastern taste.</p>
+<div class="price">$14</div>
+</div>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop" alt="">
+<div class="menu-content">
+<h3>Signature Dessert</h3>
+<p>Elegant dessert made with oriental sweetness and premium cream.</p>
+<div class="price">$12</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop" alt="">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Yerevan, Armenia</p>
+<p>📞 +374 00 000000</p>
+<p>✉ info@mayrigyerevan.com</p>
+
+<button>Book Now</button>
+
+</section>
+
+<footer>
+© 2026 Mayrig Yerevan — All Rights Reserved
+</footer>
+
+</body>
+</html>
